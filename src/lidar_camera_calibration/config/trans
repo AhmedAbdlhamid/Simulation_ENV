@@ -1,0 +1,17 @@
+rosrun tf static_transform_publisher -7.13666337e-03 -7.24736981e-02 0 1.48785548e+00 4.60361215e+00 8.76639742e-08 /velodyne_link /camera_link 10 
+
+
+rosrun tf static_transform_publisher 3.25093711 -0.15501422  1.98119145  0.03230503  4.06358619  1.52261777 /velodyne_link /camera_link 
+
+
+rosrun tf static_transform_publisher -7e-03 1.5 0 1.55 4.61 8.77e-08 /velodyne_link /camera_link 10
+
+
+-1.4827719  -0.1988317   3.19931767  3.08820603  4.28580279  4.78443878
+
+rosrun velodyne_height_map heightmap_node _grid_dimensions:=100 _cell_size:=0.25 _full_clouds:=true
+
+-2.45111054 -0.57546602  2.89161306  3.13498706  4.25426392  4.74477499
+
+rosrun tf static_transform_publisher -2.80 -0.1988317 3.19931767 3.08820603 4.28580279 4.78443878 /velodyne_link /camera_link 10
+final transform may2nd 2019

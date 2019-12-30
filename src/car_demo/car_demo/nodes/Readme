@@ -1,0 +1,11 @@
+joystick_translator_joystick 
+ -- This for running the simulation using the logitech game controller rumblepad 2
+joystick_translator_simulator
+ -- -- This for running the simulation using the Logitech G920 
+Steering_wheel_Ubuntu16.odt
+ -- Setting up the driving simulator with Ubuntu 16.04 
+use the command below to set it up
+  ./Steering_wheel.sh controller_set
+
+
+When switching to the joystick translator_simulator change it to CMakelists

@@ -1,0 +1,33 @@
+
+
+
+/***** LIDAR and camera calibration *****/ 
+
+
+1- bag_run.py 
+* you will need to run the rosbag inside the bags folder 
+
+rosbag play -l --clock new_rectified.bag
+
+2-publish the transformation for the camera matrix calculations using : 
+rosrun tf static_transform_publisher -0.14614803 -0.49683771 -0.27546327 2.02406989 -1.35998386 -0.44460865 world velodyne 10
+
+
+
+3- run the python script bag_run.py , the output can be seen in rviz window
+
+
+
+
+lidar3D_camera2D_points.py : this script is used to calculate the transformation as to be published statically. 
+
+
+
+get_image_points.py : takes an image as input and outputs the coordinates selected when you click on image , used to get the image uv points for getting the transformation.
+
+
+
+main.py : used for the running the calibration using the mcity simulation environment.
+ 
+
+map.py : used with yolo object detection to provide distance to object when the overlayed LIDAR points and yolo bounding boxes matching

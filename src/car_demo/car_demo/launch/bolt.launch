@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="model" default="$(find bolt_description)/urdf/bolt.urdf"/>
+  <arg name="rvizconfig" default="$(find car_demo)/rviz/Config.rviz" />
+
+  <param name="robot_description" textfile="$(arg model)"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+    <arg name="verbose" default="true"/>
+    <arg name="world_name" value="$(find car_demo)/worlds/mcity.world"/>
+  </include>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" >
+  </node>
+  <node pkg="fake_localization" type="fake_localization" name="fake_localization">
+  </node>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="very_inaccurate_odom" args="0 0 0 0 0 0 odom base_link"/>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="radar_to_chassis" args="0 0 0 0 0 0 chassis rad_link"/>
+  <node pkg="car_demo" type="joystick_translator_joystick" name="joystick_translator_joystick"/>
+
+  <!-- Run two joy nodes publishing to the same topic, just to cover two possible joystick locations -->
+  <node pkg="joy" type="joy_node" name="joy_node0">
+    <param name="dev" value="/dev/input/js0"/>
+  </node>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x 3 -y -12 -z 0.5 -model bolt"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+</launch>

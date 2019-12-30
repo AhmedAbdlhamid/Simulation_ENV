@@ -1,0 +1,41 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/mir-lab/mcity_ws/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/mir-lab/mcity_ws/src/image_pipeline/depth_image_proc/include",
+                "/home/mir-lab/mcity_ws/src/geometry/eigen_conversions/include",
+                "/home/mir-lab/mcity_ws/src/gazebo_radar_plugin/include",
+                "/home/mir-lab/mcity_ws/src/hector_gazebo/hector_gazebo_plugins/include",
+                "/home/mir-lab/mcity_ws/src/hector_gazebo/hector_gazebo_thermal_camera/include",
+                "/home/mir-lab/mcity_ws/src/image_pipeline/image_proc/include",
+                "/home/mir-lab/mcity_ws/src/geometry/kdl_conversions/include",
+                "/home/mir-lab/mcity_ws/src/image_pipeline/stereo_image_proc/include",
+                "/home/mir-lab/mcity_ws/src/geometry/tf/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2_bullet/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2_eigen/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2_geometry_msgs/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2_kdl/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2_msgs/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2_ros/include",
+                "/home/mir-lab/mcity_ws/src/geometry2/tf2_sensor_msgs/include",
+                "/home/mir-lab/mcity_ws/src/geometry/tf_conversions/include",
+                "/home/mir-lab/mcity_ws/src/velo2cam_gazebo/gazebo_plugins/velodyne_gazebo_plugin/include",
+                "/home/mir-lab/mcity_ws/src/velodyne_height_map/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

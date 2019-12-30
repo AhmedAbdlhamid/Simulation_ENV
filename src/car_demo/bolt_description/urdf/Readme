@@ -1,0 +1,15 @@
+This folder includes all the vehicle model for prius or bolt, 
+
+The files are written in XML format and it is used in ROS to describe all the elements of a robot. 
+
+The URDF file contains basic elements which are enclosed in a tag and are described as follows:
+
+1. Link: It assembles the physical characteristics of a part of the model. Normally parts with movable joints are considered as different links. Parts without movable joints are grouped under the same link. 
+2. Collision: it encapsulates a geometry that is used for checking the collision of two objects together. This can be a simple shape or a  mesh which exactly simulate the body this will consume computational resource without any needed necessity. A link may contain many collision elements. 
+3.Visual: This is used to visualize a part of the link, in other words, the 3D shape of this link.
+4. Inertial: It describes the dynamic properties of the link such as mass, rotational inertia matrix. 5. Sensor: This element is used to simulate the sensor in the simulation environment. 
+6. Joint: it is the connecting point between two links, the connection pivot between a parent and a child link. also controls other parameters such as joint limits, the axis of rotation of this element.
+7. Plugin: this element is used to control your model in the simulation environment.
+Each sensor link has specific properties defined. The type of noise modeled by the sensor is Gaussian noise and the standard deviation of noise can be varied in the tag in the sensor link. 
+Each sensor mounted on the vehicle to have a plugin element, which is responsible for publishing the sensor readings via ROS. A unique topic name is defined for every sensor and the reason for this is detailed. 
+

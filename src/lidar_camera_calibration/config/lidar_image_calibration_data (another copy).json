@@ -1,0 +1,27 @@
+{
+	"points": [ 
+		[3.9588,0.897586,-0.642925,1.0], // bottom left corner of board
+		[3.9739,0.887011,1.091,1.0], // top left corner of board
+		[3.6911,-1.08807,1.03109,1.0], // top right corner of board
+		[3.69545,-1.07591,-0.609603,1.0], // bottom right corner of board
+		[3.8362,-0.032156,1.02794,1.0], // top row middle point of board
+		[3.82262,-0.0833209,-0.605587,1.0] // last row middle point of board
+	],
+	"uvs": [
+		[351,426], //similar uv mappings as 
+		[354,306],
+		[474,302],
+		[474,428],
+		[413,303],
+		[410,424]
+	],
+	"initTransform": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+	"bounds": [
+		[ -4, 4 ], // +/- 4 meters
+		[ -4, 4 ], // +/- 4 meters
+		[ -4, 4 ], // +/- 4 meters
+		[ 0, 6.28318530718 ], // 2pi
+		[ 0, 6.28318530718 ], // 2pi
+		[ 0, 6.28318530718 ] // 2pi
+	]
+}
